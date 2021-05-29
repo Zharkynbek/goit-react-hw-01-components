@@ -1,5 +1,6 @@
 import React from "react";
-// import profileImage from "./preview.png"
+import PropTypes from "prop-types";
+import profileImage from "./preview.png"
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
@@ -12,27 +13,32 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
       </div>
       <ul className="stats">
         <li>
-          <span className="label">followers</span>
+          <span className="label">followers </span>
           <span className="profile__quantity">{stats.followers}</span>
         </li>
         <li>
-          <span className="quantity">views</span>
+          <span className="quantity">views </span>
           <span className="profile__quantity">{stats.views}</span>
         </li>
         <li>
-          <span className="label">likes</span>
+          <span className="label">likes </span>
           <span className="profile__quantity">{stats.likes}</span>
         </li>
       </ul>
     </div>
   );
 };
-// Profile.propTypes = {
-//   avatar: PropTypes.string,
-//   name: PropTypes.string.isRequired,
-//   tag: PropTypes.string.isRequired,
-//   location: PropTypes.string.isRequired,
-//   stats: PropTypes.number.isRequired,
-// };
+
+Profile.defaultProps = {
+  src: profileImage,
+};
+
+Profile.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  stats: PropTypes.number
+};
 
 export default Profile;
