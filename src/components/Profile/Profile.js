@@ -1,12 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import profileImage from "./preview.png"
- 
+import "./Profile.css"
+
+
 const Profile = ({ name, tag, location, avatar, stats }) => {
   return (
     <div className="profile">
       <div className="description">
-        <img className="avatar" src={avatar} alt={name} width="480" />
+        <img className="avatar" src={avatar} alt={name} width="280" />
         <p className="name">{name}</p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
@@ -17,7 +19,7 @@ const Profile = ({ name, tag, location, avatar, stats }) => {
           <span className="profile__quantity">{stats.followers}</span>
         </li>
         <li>
-          <span className="quantity">views </span>
+          <span className="label">views </span>
           <span className="profile__quantity">{stats.views}</span>
         </li>
         <li>

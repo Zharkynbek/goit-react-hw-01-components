@@ -1,0 +1,9 @@
+.transaction-history {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+}
+
+.transaction-history th {
+    color: rgb(214, 184, 48);
+}
