@@ -5,10 +5,15 @@ import "./Profile.css"
 
 
 const Profile = ({ name, tag, location, avatar, stats }) => {
+  const handleGetAlert = () => {
+    alert('my Name is Bond, James Bond')
+  }
   return (
     <div className="profile">
       <div className="description">
-        <img className="avatar" src={avatar} alt={name} width="280" />
+        <h2>Click me</h2>
+        <img onClick = {() => handleGetAlert()}
+          className="avatar" src={avatar} alt={name} width="280" />
         <p className="name">{name}</p>
         <p className="tag">{tag}</p>
         <p className="location">{location}</p>
